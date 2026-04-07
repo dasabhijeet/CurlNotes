@@ -1,10 +1,11 @@
-# 🌟 CurlNotes — API-First Notes App
+# 🌟 Stash — Notes App
 
-**CurlNotes** is a fast, lightweight, API-first notes app.  
+**Stash** is a fast, lightweight, API-first notes app.  
 Store and manage notes & folders entirely via **HTTP APIs**, **Postman**, or **cURL** — no frontend required.  
 Perfect for devs, scripts, automation, or running headless on a server.
 
-> ⚠️ **Work in progress** — actively developed, expect breaking changes.
+> ⚠️ **Work in progress** — actively developed, expect breaking changes.  
+> 🎨 **A simple UI is planned** — Stash is built API-first, with a minimal web interface coming in a future release.
 
 ---
 
@@ -21,7 +22,7 @@ Perfect for devs, scripts, automation, or running headless on a server.
 ## 📁 Project Structure
 
 ```
-CurlNotes/
+Stash/
 │
 ├── utils/
 │   └── sql_utils.py
@@ -52,8 +53,8 @@ From any machine on the network — no client install needed, just a terminal.
 ### Without Docker
 
 ```bash
-git clone https://github.com/dasabhijeet/CurlNotes.git
-cd CurlNotes
+git clone https://github.com/dasabhijeet/Stash.git
+cd Stash
 pip install -r requirements.txt
 python app.py
 ```
@@ -61,8 +62,8 @@ python app.py
 ### With Docker
 
 ```bash
-docker build -t curlnotes .
-docker run -d -p 6969:6969 --name notes-app curlnotes
+docker build -t stash .
+docker run -d -p 6969:6969 --name stash stash
 ```
 
 API will be live at `http://localhost:6969` or `http://<server-ip>:6969` from any machine on the network.
@@ -159,12 +160,24 @@ curl -X DELETE http://localhost:6969/notes/1
 
 ---
 
-## 📌 Why CurlNotes?
+## 📌 Why Stash?
 
-- Zero frontend, zero browser
+- Zero frontend, zero browser — just HTTP
 - Works over the network from any terminal
 - Perfect for scripts and automation
 - Lightweight and fully portable via Docker
+- Built API-first so any UI can be layered on top later
+
+---
+
+## 🗺 Roadmap
+
+- [x] Folders CRUD
+- [x] Notes CRUD
+- [x] Docker support
+- [ ] Simple web UI
+- [ ] Search across notes
+- [ ] Authentication
 
 ---
 
